@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Game Boy | Tamangotchi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<div class="gb">
+ <div class="bez">
+  <div class="bz"><span class="led"></span>DOT MATRIX WITH STEREO SOUND</div>
+  <div class="scr" id="scr">
+   <div id="inf"></div>
+   <div class="mid"><canvas id="c" width="32" height="32"></canvas><div class="rt"><input class="nm" id="nm" maxlength="10" aria-label="Name"><div id="st"></div></div></div>
+   <div id="msg"></div><div id="mn"></div>
+  </div>
+ </div>
+ <div class="lg">Tamangotchi<span>by Cat</span></div>
+ <div class="pad">
+  <div class="dp"><i class="ct"></i>
+   <button class="u" data-k="u" aria-label="Up" onclick="nav(-1)"></button><button class="l" data-k="l" aria-label="Left" onclick="nav(-1)"></button>
+   <button class="r" data-k="r" aria-label="Right" onclick="nav(1)"></button><button class="d" data-k="d" aria-label="Down" onclick="nav(1)"></button>
+  </div>
+  <div class="ab">
+   <div><button aria-label="B" data-k="b" onclick="bBtn()"></button>B</div>
+   <div><button aria-label="A" data-k="a" onclick="press()"></button>A</div>
+  </div>
+  <div class="ss">
+   <div><button aria-label="Select" data-k="sel" onclick="newGame()"></button>SELECT</div>
+   <div><button aria-label="Start" data-k="st" onclick="startBtn()"></button>START</div>
+  </div>
+ </div>
+ <div class="spk"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+<p class="hint">D-pad: kiezen · A: bevestigen · B: teruggaan of knuffelen · START: pauzemenu · SELECT (2x): nieuw spel<br>Toetsenbord: pijltjestoetsen, Z/spatie = A, X = B, Enter = START</p>
+<script src="script/script.js" defer></script></body></html>

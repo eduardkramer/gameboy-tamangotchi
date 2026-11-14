@@ -1,4 +1,4 @@
-/* Tamangotchi Tunes - mp3 speler
+/* Tamangotchi mp3 speler
    Voeg je nummers toe in de lijst hieronder en zet de .mp3 bestanden in de map "music".
    Voorbeelden (haal de // weg en pas aan):
      {title:'Pixel Meadow', file:'music/pixel-meadow.mp3'},
@@ -6,7 +6,8 @@
 */
 const TRACKS=[
  // {title:'Pixel Meadow', file:'music/pixel-meadow.mp3'},
-    {title:'Mood Mode', file: 'music/moodmode.mp3'}
+  {title:'Imadoki', file: 'music/imadoki.mp3'},
+  {title:'Mood Mode', file: 'music/moodmode.mp3'}
 ];
 
 (()=>{

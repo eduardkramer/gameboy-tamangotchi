@@ -7,6 +7,7 @@
 const TRACKS=[
  // {title:'Pixel Meadow', file:'music/pixel-meadow.mp3'},
  // {title:'Neon Circuit', file:'music/neon-circuit.mp3'},
+    {title:'Mood Mode', file: 'music/moodmode.mp3'}
 ];
 
 (()=>{

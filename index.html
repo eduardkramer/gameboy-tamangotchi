@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Game Boy - Tamangotchi</title>
+<title>Game Boy | Tamangotchi</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 <link rel="stylesheet" href="css/style.css"></head><body>
 <div class="gb">
@@ -30,5 +30,26 @@
  </div>
  <div class="spk"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 </div>
-<p class="hint">D-pad: kiezen · A: bevestigen · B: teruggaan of knuffelen · START: pauzemenu · SELECT (2x): nieuw spel<br>Toetsenbord: pijltjestoetsen, Z/spatie = A, X = B, Enter = START</p>
-<script src="script/script.js" defer></script></body></html>
+<div class="mp" id="mp">
+ <div class="bez">
+  <div class="bz"><span class="led"></span>TAMANGOTCHI TUNES · 8-BIT STEREO</div>
+  <div class="mscr" id="mscr">
+   <div class="mh"><span id="mst">NO DISC</span><span id="mno">--/--</span></div>
+   <div id="mt">ADD MP3 TO MUSIC/</div>
+   <div id="mtime">--:-- / --:--</div>
+   <div id="mbar" aria-label="Voortgang"><i id="mfill"></i></div>
+   <ul id="ml" aria-label="Tracklijst"></ul>
+  </div>
+ </div>
+ <div class="mctl">
+  <div><button id="mprev" aria-label="Vorige" class="ic prev"></button>PREV</div>
+  <div><button id="mplay" aria-label="Play" class="ic play"></button>PLAY</div>
+  <div><button id="mpause" aria-label="Pauze" class="ic pause"></button>PAUSE</div>
+  <div><button id="mstop" aria-label="Stop" class="ic stop"></button>STOP</div>
+  <div><button id="mnext" aria-label="Volgende" class="ic next"></button>NEXT</div>
+ </div>
+ <label class="mv">VOL<input type="range" id="mvol" min="0" max="1" step="0.05" aria-label="Volume"></label>
+</div>
+<p class="hint">D-pad: kiezen · A: bevestigen · B: teruggaan of knuffelen · START: pauzemenu · SELECT (2x): nieuw spel<br>Muziekspeler: PLAY / PAUZE / STOP, klik op een nummer in de lijst<br>Toetsenbord: pijltjestoetsen, Z/spatie = A, X = B, Enter = START</p>
+<script src="script/script.js" defer></script>
+<script src="script/music.js" defer></script></body></html>

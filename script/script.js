@@ -178,7 +178,7 @@ function draw(){
 $('nm').value=S.name;$('nm').oninput=e=>{S.name=e.target.value;save()};
 const KM={ArrowLeft:'l',ArrowUp:'u',ArrowRight:'r',ArrowDown:'d',z:'a',' ':'a',x:'b',Enter:'st'};
 addEventListener('keyup',()=>document.querySelectorAll('button.on').forEach(b=>b.classList.remove('on')));
-addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;const kb=document.querySelector('[data-k="'+KM[e.key]+'"]');if(kb)kb.classList.add('on');const k=e.key;
+addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'||(e.target.closest&&e.target.closest('.mp')))return;const kb=document.querySelector('[data-k="'+KM[e.key]+'"]');if(kb)kb.classList.add('on');const k=e.key;
  if(k==='ArrowLeft'||k==='ArrowUp')nav(-1);else if(k==='ArrowRight'||k==='ArrowDown')nav(1);
  else if(k==='z'||k===' ')press();else if(k==='x')bBtn();else if(k==='Enter')startBtn();else return;e.preventDefault()});
 ui();draw();

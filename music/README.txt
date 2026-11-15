@@ -2,6 +2,7 @@ Tamangotchi Kat + Muziekspeler
 
 # Open index.html in een web browser.
 # Hou index.html en de mappen css, script en music in dezelfde structuur.
+# De Game Boy en de muziekspeler zijn te verplaatsen (zie script/drag.js).
 # Een internet verbinding is nodig om de optionele Google font te downloaden.
 
 ## Muziek toevoegen

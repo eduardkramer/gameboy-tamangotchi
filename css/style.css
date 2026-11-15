@@ -90,3 +90,24 @@ canvas{width:96px;height:96px;flex:none;display:block;image-rendering:pixelated}
 .mctl .next::after{border-width:4px 0 4px 6px;border-left-color:#8f919d;margin:-4px 0 0 0}
 .mv{display:flex;align-items:center;gap:8px;margin:12px 2px 0;font:bold 7px Arial,sans-serif;letter-spacing:1px;color:#2d3a87}
 .mv input{flex:1;min-width:0;accent-color:#2d3a87;height:14px;margin:0;cursor:pointer}
+
+/* ===== Verplaatsbare apparaten ===== */
+body{min-height:100vh}
+.gb,.mp{cursor:grab}
+.gb.drag,.mp.drag{cursor:grabbing;user-select:none;-webkit-user-select:none}
+.gb.drag{box-shadow:inset -4px -4px 0 #a9a598,inset 3px 3px 0 #e8e5da,0 18px 32px #0008}
+.mp.drag{box-shadow:inset -4px -4px 0 #a9a598,inset 3px 3px 0 #e8e5da,0 18px 32px #0008}
+.gb .bez,.mp .bez{cursor:grab}
+.gb input,.mp input{cursor:text}
+.mp input[type=range]{cursor:pointer}
+.grip{position:absolute;top:3px;left:50%;transform:translateX(-50%);width:44px;height:10px;display:flex;gap:4px;align-items:center;justify-content:center;padding:0;border:0;background:transparent;cursor:grab;touch-action:none;-webkit-tap-highlight-color:transparent;z-index:3}
+.grip::after{content:"";position:absolute;inset:-10px -14px}
+.grip i{display:block;width:5px;height:5px;border-radius:50%;background:#a9a598;box-shadow:inset 1px 1px 0 #7d7a6e,0 1px 0 #e8e5da}
+.grip:hover i,.grip:focus-visible i{background:#2d3a87;box-shadow:none}
+.grip:focus-visible{outline:2px solid #2d3a87;outline-offset:3px;border-radius:5px}
+.drag .grip{cursor:grabbing}
+#resetpos{position:fixed;right:max(12px,env(safe-area-inset-right,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:2147483000;padding:7px 12px;font:bold 11px Arial,sans-serif;color:#2d3a87;background:var(--bg);border:1px solid currentColor;border-radius:6px;cursor:pointer;box-shadow:0 2px 8px #0004}
+#resetpos[hidden]{display:none}
+#resetpos:hover{background:#2d3a8722}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #resetpos{color:#9aa6ff}}
+:root[data-theme="dark"] #resetpos{color:#9aa6ff}
